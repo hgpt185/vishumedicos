@@ -11,6 +11,7 @@ Pure HTML/CSS/JS, no build step, no backend. Open `index.html` in a browser to r
 | `styles.css` | All styling. Theme lives in `:root` CSS variables (teal medical palette).  |
 | `script.js`  | Doctor data, appointment slot generation, booking flow, contact form, nav. |
 | `favicon.svg`| Teal rounded-square medical-cross favicon, linked from `index.html` `<head>`.   |
+| `images/`    | Real shop photos used in the hero carousel. Remaining carousel slides are Unsplash URLs. |
 
 ## Sections (in order)
 
