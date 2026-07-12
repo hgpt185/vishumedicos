@@ -329,7 +329,6 @@ img { max-width: 100%; display: block; }
 /* Responsive */
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
-  .hero-media { order: -1; }
   .carousel-track img { height: 300px; }
   .cards, .doctor-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-grid { grid-template-columns: 1fr; }
