@@ -245,6 +245,48 @@ function initContactForm() {
   });
 }
 
+// ---- Hero carousel -------------------------------------------------------
+
+function initCarousel() {
+  const track = document.getElementById("carouselTrack");
+  const dotsWrap = document.getElementById("carouselDots");
+  const carousel = document.getElementById("carousel");
+  if (!track) return;
+
+  const slides = track.children.length;
+  let index = 0;
+  let timer = null;
+
+  // Build a dot per slide.
+  for (let i = 0; i < slides; i++) {
+    const dot = document.createElement("button");
+    dot.className = "carousel-dot" + (i === 0 ? " active" : "");
+    dot.setAttribute("aria-label", `Go to image ${i + 1}`);
+    dot.addEventListener("click", () => goTo(i, true));
+    dotsWrap.appendChild(dot);
+  }
+
+  function goTo(i, restart) {
+    index = (i + slides) % slides;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dotsWrap.querySelectorAll(".carousel-dot").forEach((d, di) =>
+      d.classList.toggle("active", di === index)
+    );
+    if (restart) start();
+  }
+
+  function start() {
+    clearInterval(timer);
+    timer = setInterval(() => goTo(index + 1), 3500);
+  }
+
+  // Pause auto-scroll while hovering.
+  carousel.addEventListener("mouseenter", () => clearInterval(timer));
+  carousel.addEventListener("mouseleave", start);
+
+  start();
+}
+
 // ---- Nav toggle & misc ---------------------------------------------------
 
 function initNav() {
@@ -260,6 +302,7 @@ function initNav() {
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("year").textContent = new Date().getFullYear();
+  initCarousel();
   renderDoctorCards();
   renderDoctorPicker();
   initDatePicker();
