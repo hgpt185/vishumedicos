@@ -90,7 +90,9 @@ img { max-width: 100%; display: block; }
 .nav-links { display: flex; align-items: center; gap: 26px; }
 .nav-links a { font-weight: 500; color: var(--muted); transition: color 0.15s; }
 .nav-links a:hover { color: var(--teal); }
-.nav-links .btn { color: #fff; }
+.nav-links .btn-primary { color: #fff; }
+.nav-links .btn-ghost { color: var(--teal); border-color: var(--teal); }
+.nav-links .btn-ghost:hover { color: var(--teal-dark); background: var(--teal-light); }
 .nav-toggle { display: none; font-size: 1.5rem; background: none; border: none; cursor: pointer; color: var(--ink); }
 
 /* Hero */
