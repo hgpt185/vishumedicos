@@ -61,6 +61,7 @@ img { max-width: 100%; display: block; }
   font-size: 0.98rem;
 }
 .btn-sm { padding: 9px 18px; font-size: 0.9rem; }
+.btn-icon { width: 1.05em; height: 1.05em; fill: currentColor; flex-shrink: 0; }
 .btn-primary { background: var(--teal); color: #fff; }
 .btn-primary:hover { background: var(--teal-dark); transform: translateY(-2px); box-shadow: var(--shadow-hover); }
 .btn-ghost { background: transparent; color: var(--teal); border-color: var(--teal); }
