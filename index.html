@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vishu Medicos - Your trusted neighbourhood pharmacy and clinic. Genuine medicines, expert doctor consultations, and caring service." />
+  <title>Vishu Medicos | Pharmacy &amp; Clinic</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a href="#top" class="brand">
+        <span class="brand-mark">✚</span>
+        <span class="brand-text">Vishu<span>Medicos</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#booking">Book Appointment</a>
+        <a href="#contact">Contact</a>
+        <a href="#booking" class="btn btn-primary btn-sm">Book Now</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow">Trusted since day one</span>
+        <h1>Your health, our priority.</h1>
+        <p>Vishu Medicos brings you genuine medicines, everyday health essentials, and expert doctor consultations — all under one caring roof.</p>
+        <div class="hero-actions">
+          <a href="#booking" class="btn btn-primary">Book an Appointment</a>
+          <a href="#services" class="btn btn-ghost">Explore Services</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>10k+</strong><span>Happy customers</span></div>
+          <div><strong>3</strong><span>Expert doctors</span></div>
+          <div><strong>8am–10pm</strong><span>Open daily</span></div>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=900&q=80" alt="Modern pharmacy interior" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust bar -->
+  <div class="trustbar">
+    <div class="container trust-grid">
+      <div class="trust-item"><span>🛡️</span> 100% Genuine Medicines</div>
+      <div class="trust-item"><span>🚚</span> Free Local Delivery</div>
+      <div class="trust-item"><span>👨‍⚕️</span> Qualified Doctors On-site</div>
+      <div class="trust-item"><span>💊</span> Wide Product Range</div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">What we offer</span>
+        <h2>Complete care for your family</h2>
+        <p>From filling your prescription to seeing a specialist, everything you need is right here.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">💊</div>
+          <h3>Prescription Medicines</h3>
+          <p>Genuine, well-stored medicines dispensed by licensed pharmacists you can rely on.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🩺</div>
+          <h3>Doctor Consultations</h3>
+          <p>Book time with our General Physician, Pediatrician, or Dermatologist in just a few taps.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🧪</div>
+          <h3>Health Check Products</h3>
+          <p>BP monitors, glucometers, thermometers and wellness essentials for home care.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🚚</div>
+          <h3>Home Delivery</h3>
+          <p>Order your refills and we'll deliver them free to your doorstep in the local area.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">👶</div>
+          <h3>Baby &amp; Mother Care</h3>
+          <p>Trusted baby food, diapers, supplements and everything for new parents.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">💬</div>
+          <h3>Free Pharmacist Advice</h3>
+          <p>Not sure what you need? Our pharmacists are always happy to guide you.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Doctors -->
+  <section class="section section-alt" id="doctors">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Meet the team</span>
+        <h2>Our doctors</h2>
+        <p>Experienced, friendly, and here for you. Tap a doctor to see available appointment slots.</p>
+      </div>
+      <div class="doctor-grid" id="doctorGrid"><!-- injected by JS --></div>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section class="section" id="booking">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Appointments</span>
+        <h2>Book your visit</h2>
+        <p>Pick a doctor, choose a date, and select an open 5-minute slot.</p>
+      </div>
+
+      <div class="booking">
+        <div class="booking-step">
+          <h3><span class="step-num">1</span> Select a doctor</h3>
+          <div class="doctor-picker" id="doctorPicker"><!-- injected by JS --></div>
+        </div>
+
+        <div class="booking-step">
+          <h3><span class="step-num">2</span> Choose a date</h3>
+          <input type="date" id="datePicker" class="date-input" />
+        </div>
+
+        <div class="booking-step">
+          <h3><span class="step-num">3</span> Pick an available slot</h3>
+          <p class="slot-hint" id="slotHint">Select a doctor and date to see 5-minute slots.</p>
+          <div class="slots" id="slots"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Get in touch</span>
+        <h2>Contact us</h2>
+        <p>We'd love to help. Reach out or drop by — we're open every day.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-row"><span class="info-icon">📍</span><div><strong>Address</strong><p>Vishu Medicos, E-19, Kedia Palace Choraha,<br />opp. Reliance Smart, Murlipura Scheme, Murlipura,<br />Jaipur, Rajasthan - 302013</p></div></div>
+          <div class="info-row"><span class="info-icon">📞</span><div><strong>Phone</strong><p><a href="tel:+919829433388">+91 98294 33388</a></p></div></div>
+          <div class="info-row"><span class="info-icon">✉️</span><div><strong>Email</strong><p><a href="mailto:hello@vishumedicos.com">hello@vishumedicos.com</a></p></div></div>
+          <div class="info-row"><span class="info-icon">🕒</span><div><strong>Hours</strong><p>Monday – Sunday: 8:00 AM – 10:00 PM</p></div></div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <label>Name<input type="text" name="name" required placeholder="Your name" /></label>
+            <label>Phone<input type="tel" name="phone" required placeholder="Your phone" /></label>
+          </div>
+          <label>Email<input type="email" name="email" placeholder="you@example.com" /></label>
+          <label>Message<textarea name="message" rows="4" required placeholder="How can we help?"></textarea></label>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="map-section" aria-label="Store location">
+    <div class="map-head container">
+      <h2>Find your way to us</h2>
+      <a class="btn btn-ghost btn-sm" href="https://maps.app.goo.gl/ysRyPDM6PsWAYLnXA" target="_blank" rel="noopener">Open in Google Maps ↗</a>
+    </div>
+    <iframe
+      title="Vishu Medicos location map"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=75.7508%2C26.9653%2C75.7708%2C26.9753&layer=mapnik&marker=26.9703477%2C75.7607702"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#top" class="brand brand-footer">
+          <span class="brand-mark">✚</span>
+          <span class="brand-text">Vishu<span>Medicos</span></span>
+        </a>
+        <p class="footer-tag">Caring for your health, every single day.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#services">Services</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#booking">Book Appointment</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Visit Us</h4>
+        <p>E-19, Kedia Palace Choraha,<br />opp. Reliance Smart, Murlipura,<br />Jaipur, Rajasthan - 302013</p>
+        <p>8:00 AM – 10:00 PM daily</p>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© <span id="year"></span> Vishu Medicos. All rights reserved.</p>
+      <p>Made with care for our community.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
