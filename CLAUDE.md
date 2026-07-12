@@ -11,7 +11,7 @@ Pure HTML/CSS/JS, no build step, no backend. Open `index.html` in a browser to r
 | `styles.css` | All styling. Theme lives in `:root` CSS variables (teal medical palette).  |
 | `script.js`  | Doctor data, appointment slot generation, booking flow, contact form, nav. |
 | `favicon.svg`| Teal rounded-square medical-cross favicon, linked from `index.html` `<head>`.   |
-| `images/`    | Real shop photos used in the hero carousel. Remaining carousel slides are Unsplash URLs. |
+| `images/`    | Real shop photos (WebP + PNG fallback) for the hero carousel, plus `og-cover.jpg` for social/SEO previews. Remaining carousel slides are Unsplash URLs. |
 
 ## Sections (in order)
 
@@ -44,6 +44,13 @@ Pure HTML/CSS/JS, no build step, no backend. Open `index.html` in a browser to r
 - **Map location**: update the `bbox` and `marker` params of the `<iframe src>` in `index.html`,
   and the Google Maps `query` in the link above it.
 - **Theme colors**: edit the CSS variables in `:root` at the top of `styles.css`.
+
+## SEO
+
+`index.html` `<head>` includes a meta description/keywords, canonical URL, Open Graph +
+Twitter Card tags (preview image `images/og-cover.jpg`), and **LocalBusiness (Pharmacy)
+JSON-LD** with the real address, phone, geo coordinates, and 10:00-22:00 hours. If the
+address, phone, hours, or URL change, update the JSON-LD block too, not just the visible text.
 
 ## Notes / future work
 

@@ -117,11 +117,18 @@ img { max-width: 100%; display: block; }
   display: flex;
   transition: transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
-.carousel-track img {
+.carousel-track > img,
+.carousel-track > picture {
   flex: 0 0 100%;
   width: 100%;
   height: 420px;
+}
+.carousel-track > img,
+.carousel-track > picture img {
+  width: 100%;
+  height: 420px;
   object-fit: cover;
+  display: block;
 }
 .carousel-dots {
   position: absolute;
@@ -329,7 +336,9 @@ img { max-width: 100%; display: block; }
 /* Responsive */
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
-  .carousel-track img { height: 300px; }
+  .carousel-track > img,
+  .carousel-track > picture,
+  .carousel-track > picture img { height: 300px; }
   .cards, .doctor-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
